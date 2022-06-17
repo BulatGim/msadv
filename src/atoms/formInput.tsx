@@ -1,24 +1,16 @@
 import {FC, useState, useEffect} from 'react';
-
 import "./formInput.scss"
-
-/*
-interface IErrors {
-    error: string;
-    formInput: string;
-}
 
 interface IInputProps {
     value: string;
-    onChange: ()=>void;
+    onChange: (e:string)=>void;
     error: Array<any>;
     placeholder: string;
     isRequired?: boolean;
     name: string;
 }
-*/
 
-const FormInput/*: FC<IInputProps>*/ = (props/*{value, placeholder, onChange, error, name}*/) => {
+const FormInput: FC<IInputProps> = (props) => {
     const [messageError, setMessageError] = useState("")
 
     useEffect(()=>{
@@ -37,7 +29,7 @@ const FormInput/*: FC<IInputProps>*/ = (props/*{value, placeholder, onChange, er
         }else{
             let arr = props.error;
             let isError = true;
-            /*arr &&*/ arr.map((item)=>{
+            arr.map((item)=>{
                 if (item.formInput === props.name){
                     return isError = false;
                 }else{

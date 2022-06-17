@@ -66,14 +66,7 @@ function App() {
     const [tel, setTel] = useState()
     const [compani, setCompany] = useState("")
 
-    /*function handleChange(e) {
-        const { name, value } = e.target;
-        setValues({
-            ...values,
-            [name]: value
-        })
-    }*/
-    console.log(validatePhone(tel))
+
     let orderForm = useRef(null);
     let handleForm = async (e) => {
         e.preventDefault()
@@ -83,7 +76,6 @@ function App() {
         if(userError.length<1){
             setModalOpen(false);
             let formData = new FormData(orderForm.current)
-            console.log(orderForm.current)
             setTel("")
             setCompany("")
             setName("")
@@ -198,9 +190,6 @@ function App() {
         let regex = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
         return regex.test(phone);
     }
-    useEffect(()=>{
-        console.log(userError)
-    }, [userError])
     return (
         <div className="App">
             <section className={modalOpen ? "header_hide" : "header"} id="header">
@@ -298,9 +287,6 @@ function App() {
                             <FormInput name={"name"} error={userError} value={name} onChange={setName} placeholder={"ИМЯ"} isRequired={true}/>
                             <FormInput name={"tel"} error={userError} value={tel} onChange={setTel} placeholder={"ТЕЛЕФОН"} isRequired={true}/>
                             <FormInput name={"compani"} error={userError} value={compani || ""} onChange={setCompany} placeholder={"НАЗВАНИЕ ВАШЕЙ КОМПАНИИ"}/>
-                            {/*<input type="text" name='name' value={values.name || ''} onChange={handleChange} placeholder="ИМЯ" className="modal__input" />
-                            <input type="text" name='tel' value={values.tel || ''} onChange={handleChange} placeholder="ТЕЛЕФОН" className="modal__input" />
-                            <input type="text" name='compani' value={values.compani || ''} onChange={handleChange} placeholder="НАЗВАНИЕ ВАШЕЙ КОМПАНИИ" className="modal__input" />*/}
                             <div className="modal-formError">
                                 {userError&& userError.map((item)=>
                                     <div className="modal-formError__error">
