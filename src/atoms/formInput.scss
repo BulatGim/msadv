@@ -1,0 +1,27 @@
+.modal-input {
+  text-align: start;
+  &__input{
+    box-sizing: border-box;
+    display: block;
+    width: 470px;
+    border: 1px solid #DFDFDF;
+    border-radius: 5px;
+    padding: 22px 15px;
+    margin-top: 20px;
+    font-size: 18px;
+    &_error{
+      border: 1px solid red!important;
+    }
+    &::placeholder {
+      font-size: 18px;
+    }
+
+    &:first-child {
+      margin-top: 33px;
+    }
+  }
+  &__error{
+    text-align: start !important;
+    color: red;
+  }
+}

@@ -1,38 +1,735 @@
 .App {
-  text-align: center;
-}
+  overflow: hidden; }
+  .App * {
+    margin: 0;
+    padding: 0;
+    font-family: 'MyriadPro', sans-serif; }
+  .App h1 {
+    font-size: 36px;
+    font-weight: 400; }
+  .App h2 {
+    font-size: 60px; }
+  .App h3 {
+    font-size: 18px;
+    font-weight: 400; }
+  .App h4 {
+    font-size: 16px;
+    font-weight: 400; }
+  .App p {
+    font-size: 15px; }
+  .App .header {
+    position: fixed;
+    width: 100%;
+    background: white;
+    top: 0;
+    left: 0;
+    z-index: 100; }
+    .App .header_hide {
+      position: static; }
+    .App .header__container {
+      width: 95%;
+      margin: 10px auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .App .header .aboutCompany {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .App .header .aboutCompany__title {
+        margin-left: 20px; }
+      .App .header .aboutCompany__subtitle {
+        display: block; }
+    .App .header .contacts {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .App .header .contacts .phone {
+        text-decoration: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .App .header .contacts .phone__img {
+          max-width: 26px;
+          max-height: 26px; }
+        .App .header .contacts .phone__link {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          color: black;
+          text-decoration: none;
+          margin-left: 10px; }
+      .App .header .contacts .mail {
+        margin-left: 25px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        text-decoration: none;
+        color: black; }
+        .App .header .contacts .mail__img {
+          max-width: 26px;
+          max-height: 26px; }
+        .App .header .contacts .mail__address {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          margin-left: 10px; }
+  .App .mainImg {
+    width: 100%;
+    margin: 110px auto 0; }
+    .App .mainImg img {
+      -o-object-fit: cover;
+         object-fit: cover;
+      width: 100%;
+      height: 60vh;
+      margin: 0 auto; }
+  .App .aboutUs {
+    margin: 30px auto 50px;
+    max-width: 1290px;
+    text-align: center;
+    line-height: 34px; }
+    .App .aboutUs__description {
+      margin-top: 15px; }
+    .App .aboutUs__img {
+      margin-top: 30px;
+      width: 760px; }
+  .App .ourProduction {
+    background-color: #004B8F; }
+    .App .ourProduction__container {
+      padding: 45px 0;
+      margin: 0 auto;
+      max-width: 1280px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .App .ourProduction__title {
+      color: white;
+      text-align: center; }
+    .App .ourProduction__img {
+      margin-top: 30px;
+      width: 760px; }
+      .App .ourProduction__img:last-child {
+        margin-top: 20px; }
+  .App .examples__title {
+    text-align: center;
+    margin: 45px 0; }
+  .App .examples__container {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .App .examples__content {
+    cursor: pointer;
+    width: 25%;
+    height: 18.75vw;
+    position: relative;
+    overflow: hidden; }
+    .App .examples__content:hover .examples__background {
+      opacity: 1;
+      -webkit-transition: 0.5s;
+      transition: 0.5s; }
+    .App .examples__content:hover .examples__item {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+      -webkit-transition: 0.5s;
+      transition: 0.5s; }
+    .App .examples__content:hover .examples__text {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      opacity: 1; }
+  .App .examples__item {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+  .App .examples__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: url(./imgs/background.svg) center no-repeat;
+    background-size: cover;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+  .App .examples__text {
+    text-align: center;
+    color: white;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+  .App .example__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(./imgs/background.svg) center no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    z-index: 999; }
+    .App .example__modal_visible {
+      opacity: 1;
+      pointer-events: auto;
+      -webkit-transition: 0.5s;
+      transition: 0.5s; }
+  .App .example__content {
+    width: 860px;
+    height: 560px; }
+  .App .example__close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url(./imgs/close.svg) center no-repeat;
+    background-size: contain;
+    top: 20px;
+    right: 20px;
+    border: none;
+    cursor: pointer; }
+  .App .ourAdvantages {
+    max-width: 1150px;
+    margin: 120px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .App .ourAdvantages__title {
+      -ms-flex-item-align: center;
+          align-self: center; }
+    .App .ourAdvantages__container {
+      margin-top: 135px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .App .ourAdvantages__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 230px; }
+    .App .ourAdvantages__itemImg {
+      width: 150px;
+      height: 150px; }
+    .App .ourAdvantages__itemDescription {
+      margin-top: 38px; }
+    .App .ourAdvantages__btn {
+      max-width: 630px;
+      height: 60px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 100px;
+      border: none;
+      background-color: #004B8F;
+      font-weight: 700;
+      color: white;
+      margin-top: 105px;
+      cursor: pointer;
+      -ms-flex-item-align: center;
+          align-self: center;
+      padding: 0 60px;
+      position: relative; }
+      .App .ourAdvantages__btn-text {
+        font-weight: 700; }
+      .App .ourAdvantages__btn .animation__container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-animation: flash 2s linear infinite;
+                animation: flash 2s linear infinite; }
+      .App .ourAdvantages__btn .animation__highlight {
+        background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.4)));
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+        width: 45px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 30px;
+        -webkit-transform: skewX(-45deg);
+                transform: skewX(-45deg); }
+@-webkit-keyframes flash {
+  50% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); } }
+@keyframes flash {
+  50% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); } }
+      .App .ourAdvantages__btn_small {
+        display: none; }
+  .App .footer {
+    background-color: #004B8F; }
+    .App .footer__container {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 95%;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .App .footer__container .scrollToTop {
+        cursor: pointer;
+        margin-top: 90px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .App .footer__container .scrollToTop__description {
+          color: white;
+          margin-right: 20px; }
+        .App .footer__container .scrollToTop__img {
+          width: 24px;
+          height: 24px; }
+    .App .footer__RR {
+      margin: 135px 0 35px 0;
+      color: white; }
+  .App .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: rgba(0, 0, 0, 0.5); }
+    .App .modal__container {
+      background-color: #FFFFFF;
+      position: relative;
+      padding: 40px 45px 45px 50px;
+      text-align: center;
+      max-width: 470px;
+      margin: auto; }
+    .App .modal-formError__error {
+      color: #FFFFFF;
+      background-color: red;
+      padding-bottom: 30px; }
+      .App .modal-formError__error:first-child {
+        margin-top: 33px;
+        padding-top: 30px; }
+    .App .modal__title {
+      font-size: 30px; }
+    .App .modal__description {
+      margin-top: 20px; }
+    .App .modal__input {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      display: block;
+      width: 470px;
+      border: 1px solid #DFDFDF;
+      border-radius: 5px;
+      padding: 22px 15px;
+      margin-top: 20px;
+      font-size: 18px; }
+      .App .modal__input::-webkit-input-placeholder {
+        font-size: 18px; }
+      .App .modal__input:-ms-input-placeholder {
+        font-size: 18px; }
+      .App .modal__input::-ms-input-placeholder {
+        font-size: 18px; }
+      .App .modal__input::placeholder {
+        font-size: 18px; }
+      .App .modal__input:first-child {
+        margin-top: 33px; }
+    .App .modal__btn {
+      margin-top: 33px;
+      width: 100%;
+      color: #FFFFFF;
+      padding: 18px 0;
+      background-color: #004B8F;
+      border: none;
+      border-radius: 5px;
+      display: block; }
+    .App .modal__agreement {
+      margin-top: 20px; }
+    .App .modal__close {
+      cursor: pointer;
+      position: absolute;
+      top: -15px;
+      right: -15px; }
+  @media (min-width: 680px) and (max-width: 860px) {
+    .App h2 {
+      font-size: 18px; }
+    .App p {
+      font-size: 12px; }
+    .App .header__container {
+      width: 95%;
+      margin: 10px auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .App .header .aboutCompany__subtitle {
+      text-align: center; }
+    .App .header .aboutCompany__logo {
+      width: 45px;
+      height: 45px; }
+    .App .header .contacts {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: 20px; }
+      .App .header .contacts .phone__img {
+        max-width: 20px;
+        max-height: 20px; }
+      .App .header .contacts .mail__img {
+        max-width: 20px;
+        max-height: 20px; }
+    .App .mainImg {
+      height: 556px; }
+      .App .mainImg img {
+        -o-object-fit: none;
+           object-fit: none; }
+    .App .aboutUs {
+      margin: 30px 15px; }
+      .App .aboutUs__img {
+        width: 100%; }
+    .App .ourProduction__container {
+      margin: 0 15px;
+      padding: 30px 0; }
+    .App .ourProduction__img {
+      width: 100%;
+      margin-top: 30px; }
+      .App .ourProduction__img:last-child {
+        margin-top: 4px; }
+    .App .ourAdvantages {
+      margin: 30px 15px; }
+      .App .ourAdvantages__container {
+        margin-top: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+      .App .ourAdvantages__itemImg {
+        margin-top: 30px;
+        width: 150px; }
+      .App .ourAdvantages__itemDescription {
+        margin-top: 20px; }
+      .App .ourAdvantages__btn {
+        margin-top: 100px;
+        margin-bottom: 120px; }
+    .App .examples__title {
+      margin: 30px 0; }
+    .App .examples__content {
+      width: 100%;
+      height: 50vh; }
+      .App .examples__content:nth-child(5) {
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1; }
+      .App .examples__content:nth-child(9) {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2; }
+      .App .examples__content:nth-child(13) {
+        -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+                order: 3; }
+    .App .example__modal .examples__item {
+      -o-object-fit: fill;
+         object-fit: fill; }
+    .App .example__content {
+      width: 100%;
+      height: 50vh; }
+    .App .example__close {
+      width: 23px;
+      height: 23px; }
+    .App .footer__container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .App .footer__RR {
+      font-size: 14px;
+      margin-top: 150px;
+      margin-bottom: 20px; }
+    .App .footer .scrollToTop {
+      margin-top: 0;
+      margin-bottom: 70px; }
+      .App .footer .scrollToTop__description {
+        font-size: 14px;
+        -ms-flex-item-align: center;
+            align-self: center;
+        margin-right: 0; }
+      .App .footer .scrollToTop__img {
+        width: 24px;
+        height: 24px; }
+    .App .modal__title {
+      font-size: 18px; }
+    .App .modal__container {
+      padding: 40px 20px 40px 20px; }
+    .App .modal__input {
+      font-size: 10px;
+      margin-top: 12px;
+      width: 100%;
+      padding: 14px 7px; }
+      .App .modal__input:first-child {
+        margin-top: 50px; }
+      .App .modal__input::-webkit-input-placeholder {
+        font-size: 10px; }
+      .App .modal__input:-ms-input-placeholder {
+        font-size: 10px; }
+      .App .modal__input::-ms-input-placeholder {
+        font-size: 10px; }
+      .App .modal__input::placeholder {
+        font-size: 10px; }
+    .App .modal__btn {
+      margin-top: 20px;
+      padding: 11px 0; }
+    .App .modal__close {
+      top: 0;
+      right: 0; }
+    .App .modal__agreement {
+      font-size: 10px; } }
+  @media screen and (min-width: 320px) and (max-width: 680px) {
+    .App h2 {
+      font-size: 18px; }
+    .App h3 {
+      font-size: 15px; }
+    .App p {
+      font-size: 12px; }
+    .App .header__container {
+      width: 95%;
+      margin: 10px auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .App .header .aboutCompany {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin-top: 10px; }
+      .App .header .aboutCompany__title {
+        margin-left: 0; }
+      .App .header .aboutCompany__subtitle {
+        text-align: center; }
+      .App .header .aboutCompany__logo {
+        width: 45px;
+        height: 45px; }
+    .App .header .contacts {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: 20px; }
+      .App .header .contacts .phone__img {
+        max-width: 20px;
+        max-height: 20px; }
+      .App .header .contacts .mail__img {
+        max-width: 20px;
+        max-height: 20px; }
+    .App .mainImg {
+      height: 556px;
+      margin-top: 160px; }
+      .App .mainImg img {
+        -o-object-fit: none;
+           object-fit: none; }
+    .App .aboutUs {
+      margin: 30px 15px; }
+      .App .aboutUs__img {
+        width: 100%; }
+    .App .ourProduction__container {
+      margin: 0 15px;
+      padding: 30px 0; }
+    .App .ourProduction__img {
+      width: 100%;
+      margin-top: 30px; }
+      .App .ourProduction__img:last-child {
+        margin-top: 4px; }
+    .App .ourAdvantages {
+      margin: 30px 15px; }
+      .App .ourAdvantages__title {
+        text-align: center; }
+      .App .ourAdvantages__container {
+        margin-top: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+      .App .ourAdvantages__itemImg {
+        margin-top: 30px;
+        width: 150px; }
+      .App .ourAdvantages__itemDescription {
+        margin-top: 20px; }
+      .App .ourAdvantages__btn {
+        margin-top: 100px;
+        margin-bottom: 120px;
+        padding: 0 30px;
+        width: 100%; }
+    .App .examples__title {
+      margin: 30px 0; }
+    .App .examples__content {
+      width: 100%;
+      height: 25vh; }
+      .App .examples__content:nth-child(5) {
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1; }
+      .App .examples__content:nth-child(9) {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2; }
+      .App .examples__content:nth-child(13) {
+        -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+                order: 3; }
+    .App .example__modal .examples__item {
+      -o-object-fit: fill;
+         object-fit: fill; }
+    .App .example__content {
+      width: 100%;
+      height: 25vh; }
+    .App .example__close {
+      width: 23px;
+      height: 23px; }
+    .App .footer__container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .App .footer__RR {
+      font-size: 14px;
+      margin-top: 150px;
+      margin-bottom: 20px; }
+    .App .footer .scrollToTop {
+      margin-top: 0;
+      margin-bottom: 70px; }
+      .App .footer .scrollToTop__description {
+        font-size: 14px;
+        -ms-flex-item-align: center;
+            align-self: center;
+        margin-right: 0; }
+      .App .footer .scrollToTop__img {
+        width: 24px;
+        height: 24px; }
+    .App .modal__title {
+      font-size: 18px; }
+    .App .modal__container {
+      padding: 40px 20px 40px 20px; }
+    .App .modal__input {
+      font-size: 10px;
+      margin-top: 12px;
+      width: 100%;
+      padding: 14px 7px; }
+      .App .modal__input:first-child {
+        margin-top: 50px; }
+      .App .modal__input::-webkit-input-placeholder {
+        font-size: 10px; }
+      .App .modal__input:-ms-input-placeholder {
+        font-size: 10px; }
+      .App .modal__input::-ms-input-placeholder {
+        font-size: 10px; }
+      .App .modal__input::placeholder {
+        font-size: 10px; }
+    .App .modal__btn {
+      margin-top: 20px;
+      padding: 11px 0; }
+    .App .modal__close {
+      top: 0;
+      right: 0; }
+    .App .modal__agreement {
+      font-size: 10px; } }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*# sourceMappingURL=App.css.map */
