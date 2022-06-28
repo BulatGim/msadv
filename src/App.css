@@ -48,6 +48,7 @@
       .App .header .aboutCompany__title {
         margin-left: 20px; }
       .App .header .aboutCompany__subtitle {
+        font-weight: 300;
         display: block; }
     .App .header .contacts {
       display: -webkit-box;
@@ -91,8 +92,20 @@
           margin-left: 10px; }
   .App .mainImg {
     width: 100%;
-    margin: 110px auto 0; }
-    .App .mainImg img {
+    margin: 110px auto 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative; }
+    .App .mainImg__logo {
+      -ms-flex-item-align: center;
+          align-self: center;
+      justify-self: center;
+      position: absolute; }
+    .App .mainImg__background {
       -o-object-fit: cover;
          object-fit: cover;
       width: 100%;
@@ -103,8 +116,10 @@
     max-width: 1290px;
     text-align: center;
     line-height: 34px; }
+    .App .aboutUs__title {
+      margin-bottom: 15px; }
     .App .aboutUs__description {
-      margin-top: 15px; }
+      letter-spacing: 1px; }
     .App .aboutUs__img {
       margin-top: 30px;
       width: 760px; }
@@ -430,6 +445,20 @@
       position: absolute;
       top: -15px;
       right: -15px; }
+  @media (min-width: 860px) and (max-width: 1024px) {
+    .App .ourProduction__img {
+      width: 600px; }
+    .App .aboutUs__img {
+      width: 620px; }
+    .App .ourAdvantages__container {
+      max-width: 960px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin: 135px auto 0; } }
   @media (min-width: 680px) and (max-width: 860px) {
     .App h2 {
       font-size: 18px; }
@@ -458,11 +487,9 @@
       .App .header .contacts .mail__img {
         max-width: 20px;
         max-height: 20px; }
-    .App .mainImg {
-      height: 556px; }
-      .App .mainImg img {
-        -o-object-fit: none;
-           object-fit: none; }
+    .App .mainImg img {
+      -o-object-fit: none;
+         object-fit: none; }
     .App .aboutUs {
       margin: 30px 15px; }
       .App .aboutUs__img {
@@ -612,7 +639,6 @@
         max-width: 20px;
         max-height: 20px; }
     .App .mainImg {
-      height: 556px;
       margin-top: 160px; }
       .App .mainImg img {
         -o-object-fit: none;

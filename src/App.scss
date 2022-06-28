@@ -57,6 +57,7 @@
       }
 
       &__subtitle {
+        font-weight: 300;
         display: block;
       }
     }
@@ -105,8 +106,15 @@
   .mainImg {
     width: 100%;
     margin: 110px auto 0;
-
-    img {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    &__logo{
+      align-self: center;
+      justify-self: center;
+      position: absolute;
+    }
+    &__background{
       object-fit: cover;
       width: 100%;
       height: 60vh;
@@ -119,10 +127,12 @@
     max-width: 1290px;
     text-align: center;
     line-height: 34px;
-    &__title {}
+    &__title {
+      margin-bottom: 15px;
+    }
 
     &__description {
-      margin-top: 15px;
+      letter-spacing: 1px;
     }
 
     &__img {
@@ -468,6 +478,27 @@
     }
   }
 
+  @media(min-width: 860px) and (max-width: 1024px){
+    .ourProduction{
+      &__img{
+        width: 600px;
+      }
+    }
+    .aboutUs{
+      &__img{
+        width: 620px;
+      }
+    }
+    .ourAdvantages{
+      &__container{
+        max-width: 960px;
+        display: flex;
+        justify-content: space-between;
+        margin: 135px auto 0;
+      }
+    }
+  }
+
   @media (min-width: 680px) and (max-width: 860px) {
     h2 {
       font-size: 18px;
@@ -516,7 +547,6 @@
     }
 
     .mainImg {
-      height: 556px;
 
       img {
         object-fit: none;
@@ -740,7 +770,6 @@
     }
 
     .mainImg {
-      height: 556px;
       margin-top: 160px;
 
       img {

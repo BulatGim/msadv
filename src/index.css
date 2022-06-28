@@ -10,3 +10,9 @@
   font-weight: 700;
   font-style: bold;
 }
+@font-face {
+  font-family: "MyriadPro";
+  src: url("./MyriadPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: bold;
+}

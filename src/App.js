@@ -43,6 +43,7 @@ import ex15 from './imgs/example15.svg';
 import ex15_col from './imgs/example15_col.svg';
 import ex16 from './imgs/example16.svg';
 import ex16_col from './imgs/example16_col.svg';
+import mainLogo from "./imgs/mainLogo.png"
 
 import * as Scroll from 'react-scroll';
 import { Link } from "react-scroll";
@@ -211,7 +212,8 @@ function App() {
                 </div>
             </section>
             <section className="mainImg">
-                <img src={main} alt="" />
+                <img className="mainImg__logo" src={mainLogo} alt=""/>
+                <img className="mainImg__background" src={main} alt="" />
             </section>
             <section className="aboutUs">
                 <h1 className="aboutUs__title">О НАС</h1>
