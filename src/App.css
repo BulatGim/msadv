@@ -487,6 +487,8 @@
       .App .header .contacts .mail__img {
         max-width: 20px;
         max-height: 20px; }
+    .App .mainImg__logo {
+      display: none; }
     .App .mainImg img {
       -o-object-fit: none;
          object-fit: none; }
@@ -640,6 +642,8 @@
         max-height: 20px; }
     .App .mainImg {
       margin-top: 160px; }
+      .App .mainImg__logo {
+        display: none; }
       .App .mainImg img {
         -o-object-fit: none;
            object-fit: none; }

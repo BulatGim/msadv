@@ -547,7 +547,9 @@
     }
 
     .mainImg {
-
+      &__logo{
+        display: none;
+      }
       img {
         object-fit: none;
       }
@@ -771,7 +773,9 @@
 
     .mainImg {
       margin-top: 160px;
-
+      &__logo{
+        display: none;
+      }
       img {
         object-fit: none;
       }
