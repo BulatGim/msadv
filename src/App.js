@@ -217,7 +217,7 @@ function App() {
             </section>
             <section className="aboutUs">
                 <h1 className="aboutUs__title">О НАС</h1>
-                <h3 className="aboutUs__description">НАША КОМПАНИЯ БЫЛА ОСНОВАНА В 2000 ГОДУ.</h3>
+                <h3 className="aboutUs__description">НАША КОМПАНИЯ БЫЛА ОСНОВАНА В <span className='aboutUs__description_span'>2000</span> ГОДУ.</h3>
                 <h3 className="aboutUs__description">МЫ СПЕЦИАЛИЗИРУЕМСЯ НА РАЗРАБОТКЕ ДИЗАЙНА И ПРОИЗВОДСТВЕ РЕКЛАМНЫХ МАТЕРИАЛОВ</h3>
                 <h3 className="aboutUs__description">ДЛЯ ИЗВЕСТНЫХ РОССИЙСКИХ И МЕЖДУНАРОДНЫХ БРЕНДОВ.</h3>
                 <h3 className="aboutUs__description">МЫ НАХОДИМ ИНДИВИДУАЛЬНЫЙ ПОДХОД К КАЖДОМУ КЛИЕНТУ, ВЫСТРАИВАЯ ДОЛГОСРОЧНЫЕ ПАРТНЕРСКИЕ ОТНОШЕНИЯ.</h3>

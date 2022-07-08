@@ -113,6 +113,7 @@
       align-self: center;
       justify-self: center;
       position: absolute;
+      display:none;
     }
     &__background{
       object-fit: cover;
@@ -133,6 +134,9 @@
 
     &__description {
       letter-spacing: 1px;
+      &_span{
+        font-size: 20px;
+      }
     }
 
     &__img {
@@ -499,7 +503,7 @@
     }
   }
 
-  @media (min-width: 680px) and (max-width: 860px) {
+  @media (min-width: 600px) and (max-width: 900px) {
     h2 {
       font-size: 18px;
     }
@@ -552,6 +556,9 @@
       }
       img {
         object-fit: none;
+      }
+      &__background{
+        height: 350px;
       }
     }
 
@@ -610,7 +617,7 @@
       }
       &__content {
         width: 100%;
-        height: 50vh;
+        height: 430px;
         &:nth-child(5){
           order:1;
         }
@@ -677,9 +684,10 @@
       &__title {
         font-size: 18px;
       }
-
       &__container {
-        padding: 40px 20px 40px 20px;
+        padding: 30px 20px 40px 20px;
+        height:300px;
+        overflow: auto;
       }
 
       &__input {
@@ -689,7 +697,7 @@
         padding: 14px 7px;
 
         &:first-child {
-          margin-top: 50px;
+          margin-top: 15px;
         }
 
         &::placeholder {
@@ -779,6 +787,9 @@
       img {
         object-fit: none;
       }
+      &__background{
+        height: 350px;
+      }
     }
 
     .aboutUs {
@@ -786,6 +797,11 @@
 
       &__img {
         width: 100%;
+      }
+      &__description {
+        &_span{
+          font-size: 17px;
+        }
       }
     }
 
@@ -843,7 +859,7 @@
 
       &__content {
         width: 100%;
-        height: 25vh;
+        height: 31vh;
         &:nth-child(5){
           order:1;
         }
