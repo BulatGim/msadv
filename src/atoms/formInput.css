@@ -1,0 +1,59 @@
+.modal-input {
+  text-align: start; }
+  .modal-input__input {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: block;
+    width: 470px;
+    border: 1px solid #DFDFDF;
+    border-radius: 5px;
+    padding: 22px 15px;
+    margin-top: 20px;
+    font-size: 18px; }
+    .modal-input__input_error {
+      border: 1px solid red !important; }
+    .modal-input__input::-webkit-input-placeholder {
+      font-size: 18px; }
+    .modal-input__input:-ms-input-placeholder {
+      font-size: 18px; }
+    .modal-input__input::-ms-input-placeholder {
+      font-size: 18px; }
+    .modal-input__input::placeholder {
+      font-size: 18px; }
+    .modal-input__input:first-child {
+      margin-top: 33px; }
+  .modal-input__error {
+    text-align: start !important;
+    color: red; }
+  @media (min-width: 680px) and (max-width: 860px) {
+    .modal-input__input {
+      font-size: 10px;
+      margin-top: 12px;
+      width: 100%;
+      padding: 14px 7px; }
+      .modal-input__input:first-child {
+        margin-top: 50px; }
+      .modal-input__input::-webkit-input-placeholder {
+        font-size: 10px; }
+      .modal-input__input:-ms-input-placeholder {
+        font-size: 10px; }
+      .modal-input__input::-ms-input-placeholder {
+        font-size: 10px; }
+      .modal-input__input::placeholder {
+        font-size: 10px; } }
+  @media screen and (min-width: 320px) and (max-width: 680px) {
+    .modal-input__input {
+      font-size: 10px;
+      margin-top: 12px;
+      width: 100%;
+      padding: 14px 7px; }
+      .modal-input__input::-webkit-input-placeholder {
+        font-size: 10px; }
+      .modal-input__input:-ms-input-placeholder {
+        font-size: 10px; }
+      .modal-input__input::-ms-input-placeholder {
+        font-size: 10px; }
+      .modal-input__input::placeholder {
+        font-size: 10px; } }
+
+/*# sourceMappingURL=formInput.css.map */

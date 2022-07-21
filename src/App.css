@@ -122,7 +122,8 @@
     .App .aboutUs__description {
       letter-spacing: 1px; }
       .App .aboutUs__description_span {
-        font-size: 20px; }
+        display: inline-block;
+        font-size: 20px !important; }
     .App .aboutUs__img {
       margin-top: 30px;
       width: 760px; }
@@ -448,7 +449,7 @@
       position: absolute;
       top: -15px;
       right: -15px; }
-  @media (min-width: 860px) and (max-width: 1024px) {
+  @media (min-width: 862px) and (max-width: 1024px) {
     .App .ourProduction__img {
       width: 600px; }
     .App .aboutUs__img {
@@ -462,7 +463,7 @@
           -ms-flex-pack: justify;
               justify-content: space-between;
       margin: 135px auto 0; } }
-  @media (min-width: 600px) and (max-width: 900px) {
+  @media (min-width: 600px) and (max-width: 861px) {
     .App h2 {
       font-size: 18px; }
     .App p {
@@ -499,6 +500,8 @@
       height: 350px; }
     .App .aboutUs {
       margin: 30px 15px; }
+      .App .aboutUs__description_span {
+        font-size: 25px !important; }
       .App .aboutUs__img {
         width: 100%; }
     .App .ourProduction__container {
@@ -609,7 +612,7 @@
       right: 0; }
     .App .modal__agreement {
       font-size: 10px; } }
-  @media screen and (min-width: 320px) and (max-width: 600px) {
+  @media screen and (min-width: 320px) and (max-width: 599px) {
     .App h2 {
       font-size: 18px; }
     .App h3 {
@@ -661,7 +664,7 @@
       .App .aboutUs__img {
         width: 100%; }
       .App .aboutUs__description_span {
-        font-size: 17px; }
+        font-size: 17px !important; }
     .App .ourProduction__container {
       margin: 0 15px;
       padding: 30px 0; }

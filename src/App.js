@@ -204,7 +204,7 @@ function App() {
                             <img className="phone__img" src={phone} alt="" />
                             <p className="phone__link"><p>+7 (495) 781 55 18</p></p>
                         </a>
-                        <a className="mail" href="mailto:ask@htmlbook.ru">
+                        <a className="mail" href="mailto:HLP@MS-ADV.RU">
                             <img className="mail__img" src={mail} alt="" />
                             <p className="mail__address">HLP@MS-ADV.RU</p>
                         </a>
